@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ShortUrl.Net
+namespace ShortUrlNet
 {
     public class Startup
     {
