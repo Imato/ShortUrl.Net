@@ -7,6 +7,6 @@ namespace ShortUrlNet.Models
     {     
         public ObjectId UserKey { get; set; }        
         public DateTime CreateDate { get; set; }
-        public DateTime ExpireDate { get; set; }
+        public DateTime ExpireDate { get; set; }        
     }
 }

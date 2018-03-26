@@ -8,5 +8,10 @@ namespace ShortUrlNet.Models
     {
         [BsonId]
         public ObjectId Key { get; set; }
+
+        public override string ToString()
+        {
+            return Key.ToString();
+        }
     }
 }

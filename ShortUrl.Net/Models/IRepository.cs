@@ -1,4 +1,5 @@
 ﻿using LiteDB;
+using System.Collections.Generic;
 
 namespace ShortUrlNet.Models
 {
@@ -12,5 +13,7 @@ namespace ShortUrlNet.Models
         User GetUser(string login);
         User GetUser(ObjectId key);
         void ViewUrl(ShortUrl url);
+        IEnumerable<User> GetUsers();
+        int GetUsersCout();
     }
 }

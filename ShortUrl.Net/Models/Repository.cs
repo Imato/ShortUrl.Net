@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Concurrent;
+using System.Linq;
+using System.Collections.Generic;
 using LiteDB;
 
 namespace ShortUrlNet.Models
@@ -109,6 +110,24 @@ namespace ShortUrlNet.Models
                 var k = new ObjectId(key);
                 var c = db.GetCollection<ApiKey>(_keys);
                 return c.FindOne(x => x.Key == k);
+            }
+        }
+
+        public IEnumerable<User> GetUsers()
+        {
+            using (var db = new LiteDatabase(_db))
+            {
+                var c = db.GetCollection<User>(_users);
+                return c.FindAll();
+            }
+        }
+
+        public int GetUsersCout()
+        {
+            using (var db = new LiteDatabase(_db))
+            {
+                var c = db.GetCollection<User>(_users);
+                return c.Count();
             }
         }
     }
